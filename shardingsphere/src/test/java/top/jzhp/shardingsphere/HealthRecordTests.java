@@ -29,7 +29,7 @@ public class HealthRecordTests {
 
     private List<Long> insertHealthRecords() throws SQLException {
         List<Long> result = new ArrayList<>(10);
-        for (Long i = 1L; i <= 10; i++) {
+        for (Long i = 1L; i <= 1000; i++) {
             HealthRecord healthRecord = insertHealthRecord(i);
             insertHealthTask(i, healthRecord);
             result.add(healthRecord.getRecordId());
