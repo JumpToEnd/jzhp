@@ -7,19 +7,24 @@
         <result column="level_id" property="levelId" jdbcType="INTEGER"/>
         <result column="remark" property="remark" jdbcType="VARCHAR"/>
     </resultMap>
-
-<!--    <insert id="addEntity" useGeneratedKeys="true" keyProperty="recordId" >
-        INSERT INTO health_record (user_id, level_id, remark) 
-        VALUES (#{userId,jdbcType=INTEGER}, #{levelId,jdbcType=INTEGER}, 
-        		#{remark,jdbcType=VARCHAR})
+    <insert id="insert"  useGeneratedKeys="true" keyProperty="recordId">
+        INSERT INTO health_record (user_id, level_id, remark)
+        VALUES (#{userId,jdbcType=INTEGER}, #{levelId,jdbcType=INTEGER},
+                #{remark,jdbcType=VARCHAR})
     </insert>
 
-    <delete id="deleteEntity">
-        DELETE FROM health_record WHERE record_id = #{recordId,jdbcType=INTEGER};
-    </delete>
+    <!--    <insert id="addEntity" useGeneratedKeys="true" keyProperty="recordId" >
+            INSERT INTO health_record (user_id, level_id, remark)
+            VALUES (#{userId,jdbcType=INTEGER}, #{levelId,jdbcType=INTEGER},
+                    #{remark,jdbcType=VARCHAR})
+        </insert>
 
-    <select id="findEntities" resultMap="healthRecordMap">
-        SELECT * FROM health_record;
-    </select>-->
+        <delete id="deleteEntity">
+            DELETE FROM health_record WHERE record_id = #{recordId,jdbcType=INTEGER};
+        </delete>
+
+        <select id="findEntities" resultMap="healthRecordMap">
+            SELECT * FROM health_record;
+        </select>-->
     
 </mapper>

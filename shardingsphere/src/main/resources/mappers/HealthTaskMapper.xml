@@ -7,19 +7,24 @@
         <result column="record_id" property="recordId" jdbcType="INTEGER"/>
         <result column="task_name" property="taskName" jdbcType="VARCHAR"/>
     </resultMap>
-   
-<!--    <insert id="addEntity" useGeneratedKeys="true" keyProperty="taskId" >
-        INSERT INTO health_task (user_id, record_id, task_name) 
-        VALUES (#{userId,jdbcType=INTEGER}, #{recordId,jdbcType=INTEGER}, 
-        		#{taskName,jdbcType=VARCHAR})
+    <insert id="insert" useGeneratedKeys="true" keyProperty="taskId">
+        INSERT INTO health_task (user_id, record_id, task_name)
+        VALUES (#{userId,jdbcType=INTEGER}, #{recordId,jdbcType=INTEGER},
+                #{taskName,jdbcType=VARCHAR})
     </insert>
 
-    <delete id="deleteEntity">
-        DELETE FROM health_task WHERE task_id = #{taskId,jdbcType=INTEGER};
-    </delete>
+    <!--    <insert id="addEntity" useGeneratedKeys="true" keyProperty="taskId" >
+            INSERT INTO health_task (user_id, record_id, task_name)
+            VALUES (#{userId,jdbcType=INTEGER}, #{recordId,jdbcType=INTEGER},
+                    #{taskName,jdbcType=VARCHAR})
+        </insert>
 
-    <select id="findEntities" resultMap="healthTaskMap">
-        SELECT * FROM health_task;
-    </select>-->
+        <delete id="deleteEntity">
+            DELETE FROM health_task WHERE task_id = #{taskId,jdbcType=INTEGER};
+        </delete>
+
+        <select id="findEntities" resultMap="healthTaskMap">
+            SELECT * FROM health_task;
+        </select>-->
     
 </mapper>

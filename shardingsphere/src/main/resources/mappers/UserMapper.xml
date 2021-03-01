@@ -5,10 +5,9 @@
         <result column="user_id" property="userId" jdbcType="INTEGER"/>
         <result column="user_name" property="userName" jdbcType="VARCHAR"/>
     </resultMap>
-    <select id="count" resultType="java.lang.Integer">
-        SELECT *
-        FROM user
-    </select>
+    <insert id="insert">
+        INSERT INTO user(user_id,user_name) VALUES(#{user.userId}, #{user.userName})
+    </insert>
 
     <!--    <insert id="addEntity">
             INSERT INTO user (user_id, user_name) VALUES (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR})

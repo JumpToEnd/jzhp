@@ -5,18 +5,22 @@
         <result column="level_id" property="levelId" jdbcType="INTEGER"/>
         <result column="level_name" property="levelName" jdbcType="VARCHAR"/>
     </resultMap>
-
-<!--    <insert id="addEntity">
-        INSERT INTO health_level (level_id, level_name) 
-        VALUES (#{levelId,jdbcType=INTEGER}, #{levelName,jdbcType=VARCHAR})
+    <insert id="insert">
+        INSERT INTO health_level(level_id, level_name)
+        VALUES(#{healthLevel.levelId}, #{healthLevel.levelName})
     </insert>
 
-    <delete id="deleteEntity">
-        DELETE FROM health_level WHERE level_id = #{levelId,jdbcType=INTEGER};
-    </delete>
+    <!--    <insert id="addEntity">
+            INSERT INTO health_level (level_id, level_name)
+            VALUES (#{levelId,jdbcType=INTEGER}, #{levelName,jdbcType=VARCHAR})
+        </insert>
 
-    <select id="findEntities" resultMap="healthLevelMap">
-        SELECT * FROM health_level;
-    </select>-->
+        <delete id="deleteEntity">
+            DELETE FROM health_level WHERE level_id = #{levelId,jdbcType=INTEGER};
+        </delete>
+
+        <select id="findEntities" resultMap="healthLevelMap">
+            SELECT * FROM health_level;
+        </select>-->
     
 </mapper>

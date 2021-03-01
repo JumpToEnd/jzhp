@@ -1,9 +1,12 @@
 package top.jzhp.shardingsphere.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import top.jzhp.shardingsphere.entity.User;
 
 @Mapper
-public interface UserRepository  {
+public interface UserRepository {
 
-    int count();
+
+    int insert(@Param("user") User user);
 }
