@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="leetcode" />
+        <module name="rocketmq" />
         <module name="kafka" />
         <module name="netty" />
       </profile>
@@ -16,6 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="kafka" options="-parameters" />
       <module name="netty" options="-parameters" />
+      <module name="rocketmq" options="-parameters" />
     </option>
   </component>
 </project>
